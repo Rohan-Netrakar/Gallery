@@ -1,0 +1,284 @@
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 5%;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.container > h1 {
+  min-height: 70vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #aaa;
+  font-size: 28px;
+}
+
+
+/* =========================
+   IMAGE MASONRY
+========================= */
+
+.image-container {
+  column-count: 4;
+  column-gap: 25px;
+  width: 100%;
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.image-container a {
+  display: inline-block;
+
+  width: 100%;
+  margin-bottom: 25px;
+
+  text-decoration: none;
+
+  break-inside: avoid;
+}
+
+
+/* =========================
+   IMAGE CARD
+========================= */
+
+.imagediv {
+  width: 100%;
+
+  background: #1c1c1c;
+
+  border: 1px solid #292929;
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  padding-bottom: 14px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Hover */
+
+.imagediv:hover {
+  transform: translateY(-5px);
+
+  border-color: #444;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.imagediv img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================
+   AUTHOR
+========================= */
+
+.imagediv h3 {
+  padding: 14px 15px 0;
+
+  color: #eee;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+
+  width: fit-content;
+
+  margin: 45px auto 20px;
+  padding: 8px;
+
+  background: #1c1c1c;
+
+  border: 1px solid #303030;
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Individual page */
+
+.custom-page-item {
+  list-style: none;
+}
+
+
+/* Page button */
+
+.custom-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 40px;
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+  color: #999;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Page hover */
+
+.custom-page-link:hover {
+  background: #333;
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* Active page */
+
+.custom-active .custom-page-link {
+  background: white;
+  color: #111;
+
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.15);
+}
+
+
+/* Previous / Next */
+
+.custom-prev .custom-page-link,
+.custom-next .custom-page-link {
+  padding: 0 16px;
+
+  background: #292929;
+  color: white;
+}
+
+
+/* Previous / Next hover */
+
+.custom-prev .custom-page-link:hover,
+.custom-next .custom-page-link:hover {
+  background: #444;
+}
+
+
+/* Disabled */
+
+.custom-disabled .custom-page-link {
+  opacity: 0.3;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .image-container {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    padding: 20px;
+  }
+
+  .image-container {
+    column-count: 2;
+  }
+
+  .custom-pagination {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .image-container {
+    column-count: 1;
+  }
+
+  .custom-pagination {
+    gap: 3px;
+    padding: 6px;
+  }
+
+  .custom-page-link {
+    min-width: 34px;
+    height: 34px;
+
+    padding: 0 8px;
+
+    font-size: 13px;
+  }
+
+  .custom-prev .custom-page-link,
+  .custom-next .custom-page-link {
+    padding: 0 10px;
+  }
+}
