@@ -15,7 +15,7 @@ It also includes a responsive masonry-style image layout and React Router naviga
 
 🔗 **Live Demo:** Add your deployed website URL here.
 
-https://your-project-name.onrender.com
+https://gallery-flax-five.vercel.app/
 
 ---
 
@@ -23,11 +23,11 @@ https://your-project-name.onrender.com
 
 Add screenshots of your project here.
 
-![Home Page](./screenshots/home.png)
+![Home Page](./src/assets/home.png)
 
-![Pagination](./screenshots/pagination.png)
+![Pagination](./src/assets/pagination.png)
 
-![Infinite Scroll](./screenshots/infinite-scroll.png)
+![Infinite Scroll](./src/assets/infinite-scroll.png)
 
 ---
 
@@ -110,27 +110,6 @@ The API returns information such as:
 
 ---
 
-## 📂 Project Structure
-
-src/
-│
-├── components/
-│   │
-│   ├── HomePage/
-│   │   └── Home.jsx
-│   │
-│   ├── pagination/
-│   │   └── Pagination.jsx
-│   │
-│   └── infinite scrolling/
-│       └── Infinite.jsx
-│
-├── App.jsx
-├── main.jsx
-│
-└── CSS files
-
----
 
 ## ♾️ How Infinite Scrolling Works
 
@@ -273,11 +252,11 @@ The images maintain their original aspect ratio instead of being forced into squ
 
 ### 1. Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/Rohan-Netrakar/Gallery.git
 
 ### 2. Navigate into the project
 
-cd YOUR_REPOSITORY
+cd Gallery
 
 ### 3. Install dependencies
 
